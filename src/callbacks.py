@@ -380,9 +380,12 @@ def register_prediction_callback(
                             ratio_pad=pbatch["ratio_pad"],
                             xywh=True,
                         )
-                        corners = np.asarray(
+                        corners = (
                             ops.xywhr2xyxyxyxy(above_bboxes)
-                        ).astype(int)
+                            .cpu()
+                            .numpy()
+                            .astype(int)
+                        )
                         predictions[stem] = {
                             "boxes": corners.tolist(),
                             "confs": above_confs.cpu().numpy().tolist(),
