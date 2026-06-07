@@ -14,7 +14,7 @@ ALTITUDE_BUCKETS: List[Tuple[str, float, float]] = [
 ]
 
 # ── wandb ───────────────────────────────────────────────────────────────────
-WANDB_ENTITY  = "hamid-sabeti"
+WANDB_ENTITY  = "hamid-research"
 WANDB_PROJECT = "Altitude-Aware-YOLO"
 
 # ── paths ───────────────────────────────────────────────────────────────────
